@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+	<header th:fragments:"header">
+		<nav class="navbar navbar-expand-lg navbar-lightbg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/">Bookclub</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					area-controls="navbarNav" area-expanded="false"
+					area-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<vl class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="/about"
+						th:href="@{/about}">About Us</a></li>
+					<li class="nav-item"><a class="nav-link" href="/contact"
+						th:href="@{/contact}">Contact Us</a></li>
+					</vl>
+				</div>
+			</div>
+
+		</nav>
+	</header>
+</body>
+</html>
