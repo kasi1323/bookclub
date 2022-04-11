@@ -7,6 +7,15 @@ import org.springframework.stereotype.Service;
 import com.bookclub.model.Book;
 import com.bookclub.service.dao.BookDao;
 
+/**
+ * 
+ * Kasi Viswanath, (2022). CIS 530 Server Side Java Programming. Bellevue University, all
+ * 
+ * rights reserved.
+ * 
+ * Purpose: BookDao class used to retrieve book data.
+ * 
+ */
 @Service
 public class MemBookDao implements BookDao {
 
@@ -50,6 +59,7 @@ public class MemBookDao implements BookDao {
    */
   @Override
   public Book find(String isbn) {
+
     return this.books.stream().filter(book -> book.getIsbn().equals(isbn)).findFirst().get();
   }
 }

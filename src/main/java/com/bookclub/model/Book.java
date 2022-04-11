@@ -2,6 +2,14 @@ package com.bookclub.model;
 
 import java.util.List;
 
+/**
+ * 
+ * Kasi Viswnath, (2022). CIS 530 Server Side Java Programming. Bellevue University, all
+ * 
+ * rights reserved. Purpose: Book class provides template for an object representing book for
+ * Bookclub Spring Boot application.
+ * 
+ */
 public class Book {
   private String isbn;
   private String title;

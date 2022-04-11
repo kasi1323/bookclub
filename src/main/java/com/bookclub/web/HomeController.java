@@ -11,8 +11,13 @@ import com.bookclub.model.Book;
 import com.bookclub.service.impl.MemBookDao;
 
 /**
- * @author kasiv
- *
+ * 
+ * Kasi Viswanath, (2022). CIS 530 Server Side Java Programming. Bellevue University, all
+ * 
+ * rights reserved.
+ * 
+ * Purpose: HomeController class used to land home page.
+ * 
  */
 @Controller
 @RequestMapping("/")
