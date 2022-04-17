@@ -2,6 +2,7 @@ package com.bookclub.model;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import org.springframework.data.annotation.Id;
 
 /**
  * 
@@ -14,6 +15,23 @@ import javax.validation.constraints.NotNull;
  * 
  */
 public class WishlistItem {
+
+  /**
+   * @return the id
+   */
+  public String getId() {
+    return id;
+  }
+
+  /**
+   * @param id the id to set
+   */
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  @Id
+  private String id;
 
   @NotNull
   @NotEmpty(message = "ISBN is a required field.")

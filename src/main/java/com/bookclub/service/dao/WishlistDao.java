@@ -1,7 +1,8 @@
 package com.bookclub.service.dao;
 
 import com.bookclub.model.WishlistItem;
-import com.bookclub.service.GenericDao;
+import com.bookclub.service.GenericCrudDao;
+
 
 /**
  * 
@@ -12,5 +13,5 @@ import com.bookclub.service.GenericDao;
  * Purpose: BookDao interface used to retrieve wishlist data.
  * 
  */
-public interface WishlistDao extends GenericDao<WishlistItem, String> {
+public interface WishlistDao extends GenericCrudDao<WishlistItem, String> {
 }
