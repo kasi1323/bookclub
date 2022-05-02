@@ -1,6 +1,5 @@
 package com.bookclub.web;
 
-import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,18 +31,9 @@ public class WishlistController {
     this.wishlistDao = wishlistDao;
   }
 
-  /**
-   * @param model
-   * @return
-   */
+
   @RequestMapping(method = RequestMethod.GET)
-  public String showWishlist(Model model) {
-
-
-    List<WishlistItem> wishlist = wishlistDao.list();
-
-    model.addAttribute("wishlist", wishlist);
-
+  public String showWishlist() {
     return "wishlist/list";
   }
 
