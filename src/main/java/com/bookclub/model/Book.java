@@ -1,7 +1,5 @@
 package com.bookclub.model;
 
-import java.util.List;
-
 /**
  * 
  * Kasi Viswnath, (2022). CIS 530 Server Side Java Programming. Bellevue University, all
@@ -14,17 +12,25 @@ public class Book {
   private String isbn;
   private String title;
   private String description;
+  private String infoUrl;
   private int numOfPages;
-  private List<String> authors;
+
 
   public Book() {}
 
-  public Book(String isbn, String title, String description, int numOfPages, List<String> authors) {
+  public Book(String isbn, String title, String description, String infoUrl, int numOfPages) {
     this.isbn = isbn;
     this.title = title;
     this.description = description;
+    this.infoUrl = infoUrl;
     this.numOfPages = numOfPages;
-    this.authors = authors;
+
+  }
+
+  public Book(String isbn, String title, String infoUrl) {
+    this.isbn = isbn;
+    this.title = title;
+    this.infoUrl = infoUrl;
   }
 
   public void setIsbn(String isbn) {
@@ -59,17 +65,25 @@ public class Book {
     return numOfPages;
   }
 
-  public void setAuthors(List<String> authors) {
-    this.authors = authors;
+
+
+  /**
+   * @return the infoUrl
+   */
+  public String getInfoUrl() {
+    return infoUrl;
   }
 
-  public List<String> getAuthors() {
-    return authors;
+  /**
+   * @param infoUrl the infoUrl to set
+   */
+  public void setInfoUrl(String infoUrl) {
+    this.infoUrl = infoUrl;
   }
 
   @Override
   public String toString() {
     return String.format("Book{isbn=%s, title=%s, description=%s, numOfPages=%s, authors=%s}", isbn,
-        title, description, numOfPages, authors);
+        title, description, numOfPages, infoUrl);
   }
 }

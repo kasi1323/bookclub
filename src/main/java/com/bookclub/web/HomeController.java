@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import com.bookclub.model.Book;
-import com.bookclub.service.impl.MemBookDao;
+import com.bookclub.service.impl.RestBookDao;
 
 /**
  * 
@@ -24,7 +24,7 @@ import com.bookclub.service.impl.MemBookDao;
 public class HomeController {
 
   @Autowired
-  private MemBookDao memBookDao;
+  private RestBookDao memBookDao;
 
   /**
    * @param model
@@ -32,7 +32,7 @@ public class HomeController {
    */
   @RequestMapping(method = RequestMethod.GET)
   public String showHome(Model model) {
-    MemBookDao bookDao = new MemBookDao();
+    RestBookDao bookDao = new RestBookDao();
     List<Book> books = bookDao.list();
 
     for (Book book : books) {
