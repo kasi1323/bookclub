@@ -12,7 +12,7 @@ import java.util.List;
 public interface GenericDao<E, K> {
 
   // Return a list of objects of type E.
-  List<E> list();
+  List<E> list(String key);
 
   // Return an object of type E by type K value.
   E find(K key);
